@@ -17,9 +17,7 @@ artist: The artist of the song
 lyrics: The lyrics of the song
 You can also use the getLyrics method to retrieve lyrics for a specific song, artist, and album. This method takes three arguments: song, artist, and album, and returns a promise that resolves to a lyrics object.
 <pre><code> 
-//get lyrics
 async function getLyrics(artist, songTitle){
-    //alert(songTitle, artist)
 
     const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
     const data = await res.json();
@@ -39,4 +37,4 @@ async function getLyrics(artist, songTitle){
 </code></pre>
 
 # Limitations
-Please note that the Lyrics.ovh API has rate limits in place, so you should be mindful of how often you make requests. You can find more information about the rate limits and usage restrictions at https://lyrics.ovh/api.
+Please note that the Lyrics.ovh API has rate limits in place, so you should be mindful of how often you make requests. You can find more information about the rate limits and usage restrictions at https://lyrics.ovh.
